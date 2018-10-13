@@ -12,15 +12,15 @@ html, body {
 	height: 100%;
 	width: 100%;
 }
+
 .container {
-	margin-left: 15px !important;
-	margin-right: 15px !important;
+	margin: 1rem 1rem;
 }
 header {
 	width: 100%;
 	max-height: 600px;
 	position: relative;
-	/*overflow: hidden;*/
+	box-sizing: border-box;
 }
 header nav.nav-header {
 	position: absolute;
@@ -111,8 +111,8 @@ header nav.nav-header ul.ul-header-center li a.main-menu {
 
 header nav.nav-header ul.ul-header-center li a.main-menu:after {
     content: '';
-    height: 0px;
-    width: 0px;
+    height: 0;
+    width: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-bottom: 5px solid;
@@ -142,8 +142,8 @@ header nav.nav-header-center section.submenu-container:hover ~ li a.main-menu:af
 ul.ul-header-center li section.submenu-container {
 	background-color: rgba(255,255,255,0.95);
 	position: absolute;
-	left: .5rem;
-	right: .5rem;
+	left: 1rem;
+	right: 1rem;
 	float: left;
 	opacity: 0;
 	visibility: hidden;
@@ -209,6 +209,7 @@ section.nav-image {
 	position: relative;
 	max-height: 600px;
 	height: 600px;
+	overflow: hidden;
 }
 section.nav-image img{
 	position: absolute;
@@ -219,6 +220,8 @@ section.nav-image img{
 	top: 0;
 	left: 0;
 }
+
+/* content header */
 section.nav-image div.content-header {
 	width: 100%;
 	position: absolute;
@@ -233,7 +236,7 @@ section.nav-image div.content-header h2 {
     font-size: 3rem;
     font-weight: 100;
     text-transform: uppercase;
-    color: white;
+    color: #fff;
     pointer-events: none;
     -webkit-appearance: none;
 }
@@ -252,12 +255,129 @@ section.nav-image div.content-header span:hover {
 	cursor: pointer;
 }
 
-section.nav-image div.content-header span a {
+/* content demo product */
+div.container.demo-product-7 div.demo-content span.content-bt,
+div.container.demo-product-8 div.demo-product-left a span.content-t
+{
+    border: 1px solid #313131;
+    background-color: transparent;
+    margin: 10px 10px 0px 10px;
+    padding: 10px 5px;
+    width: 140px;
+    display: inline-block;
+    text-align: center;
+    transition: 0.2s;
+
+}
+
+div.container.demo-product-7 div.demo-content span.content-bt:hover,
+div.container.demo-product-8 div.demo-product-left span.content-t:hover {
+	background-color: #5b5b5b;
+	cursor: pointer;
+}
+
+section.nav-image div.content-header span a, div.container.demo-product-7 div.demo-content span.content-bt,
+div.container.demo-product-8 a {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: .8rem;
     text-align: center;
 }
+
+/* DEMO product */
+div.container.demo-product-7 {
+	height: 700px;
+	position: relative;
+	overflow: hidden;
+}
+div.container.demo-product-7 img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+div.demo-content span.content-bt {
+	position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* demo product left - right */
+div.container.demo-product-8 {
+	height: 800px;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+}
+div.demo-product-left{
+	height: 100%;
+    float: left;
+    width: 49%;
+    position: relative;
+}
+div.container.demo-product-8 img {
+	width: 100%;
+}
+/* content top */
+div.container.demo-product-8 span.content-t {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 1%;
+	z-index: 3;
+}
+/* footer */
+footer {
+	height: 50px;
+	background-color: rgb(27, 27, 27);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer-left a, .footer-right form > span,
+.footer-right form > label, .follow > a {
+	text-decoration: none;
+	color: #e5dfd9;
+	text-transform: uppercase;
+	font-size: .7rem;
+	padding: 0px 1rem;
+}
+footer .footer-right form input {
+	border: none;
+	outline: none;
+	border-bottom: .1em solid #e5dfd9;
+	background-color: transparent;
+	color: #e5dfd9;
+	padding: 0rem 0rem .1rem 0rem;
+	font-size: 13px;
+	font-weight: 600;
+}
+footer div > a:hover{
+	color: #fff;
+}
+footer div.footer-right button {
+	background-color: transparent;
+	color: #e5dfd9;
+    
+    padding: .1em .5rem;
+}
+footer div.footer-right input:valid ~ button:hover {
+	cursor: pointer;
+	background-color: #e5dfd9;
+    color: #313131;
+}
+div.footer-left, div.footer-right {
+	float: left;
+	width: 50%;
+}
+
+div.footer-right form , div.footer-right .follow {
+    float: left;
+}
+
+
+
 
 
