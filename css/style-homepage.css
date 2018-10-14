@@ -11,10 +11,13 @@
 html, body {
 	height: 100%;
 	width: 100%;
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
 }
 
 .container {
-	margin: 1rem 1rem;
+	margin: 1rem 1rem !important;
 }
 header {
 	width: 100%;
@@ -134,7 +137,7 @@ ul.search-box.active {
 	opacity: 1;
 	visibility: visible;
 }
-header nav.nav-header ul li a svg#Capa_1 {
+header nav.nav-header ul li a svg {
     height: 11px;
     width: 11px;
     color: #e5dfd9;
@@ -268,7 +271,6 @@ ul.ul-header-center li section.submenu-container div ul.sub-menu li a {
 ul.ul-header-center li section.submenu-container div ul.sub-menu li a:hover {
 	color: #313131;
 }
-
 /* HEADER image, content */
 section.nav-image {
 	position: relative;
