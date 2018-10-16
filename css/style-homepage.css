@@ -13,7 +13,6 @@ html, body {
 	width: 100%;
 	-webkit-font-smoothing: antialiased;
 	-webkit-tap-highlight-color: transparent;
-	box-sizing: border-box;
 }
 
 .container {
@@ -397,11 +396,16 @@ div.container.demo-product-8 span.content-t {
 }
 /* footer */
 footer {
-	height: 50px;
-	background-color: rgb(27, 27, 27);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	/*position: relative;*/
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 50px;
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .footer-left a, .footer-right form > span,
 .footer-right form > label, .follow > a {
@@ -426,7 +430,6 @@ footer div > a:hover{
 footer div.footer-right button {
 	background-color: transparent;
 	color: #e5dfd9;
-    
     padding: .1em .5rem;
 }
 footer div.footer-right input:valid ~ button:hover {
