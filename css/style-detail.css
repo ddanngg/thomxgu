@@ -98,6 +98,10 @@ div.other-product a:hover {
 
 	.right-products-info div > span {
 	}
+
+div.right-products-info div.product-size span, div.right-products-info div.product-color span:first-child, ul.product-list-size li {
+    font-size: 1.8rem;
+}
 	div.middle-products-images {
 		
 	}
@@ -108,10 +112,12 @@ div.other-product a:hover {
 	div.left-products-images img {
 	    position: absolute;
 	}
-
-	/*img._detailImgActive {
+	div.left-products-images img._detailImgActive {
 	    z-index: 2;
-	}*/
+	}
+	div.right-products-info div.product-button button {
+	    width: 20%;
+	}
 	
 	 /*other products */
 	div.other-product {
